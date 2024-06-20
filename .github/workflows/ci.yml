@@ -9,7 +9,7 @@ on:
 
 jobs:
   create-release:
-    if: github.repository == 'lucide-icons/lucide'
+    if: github.repository == 'lab2lives/lucide'
     runs-on: ubuntu-latest
     outputs:
       VERSION: ${{ steps.new-version.outputs.NEW_VERSION }}
@@ -67,7 +67,7 @@ jobs:
           body: ${{ steps.change-log.outputs.CHANGE_LOG }}
 
   start-release:
-    if: github.repository == 'lucide-icons/lucide'
+    if: github.repository == 'lab2lives/lucide'
     needs: create-release
     uses: './.github/workflows/release.yml'
     secrets: inherit
