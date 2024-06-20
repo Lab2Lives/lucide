@@ -1,0 +1,17 @@
+{
+  "$schema": "../icon.schema.json",
+  "contributors": [
+    "erichieule"
+  ],
+  "tags": [
+    "weather",
+    "time",
+    "morning",
+    "day"
+  ],
+  "categories": [
+    "arrows",
+    "weather",
+    "time"
+  ]
+}
