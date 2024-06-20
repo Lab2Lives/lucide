@@ -11,7 +11,7 @@ on:
         required: true
         description: Version
         type: string
-        
+
   workflow_dispatch:
     inputs:
       version:
@@ -43,11 +43,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        package:
-          [
-            'lucide-react',
-            'lucide-react-native'
-          ]
+        package: ['lucide-react']
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
@@ -60,7 +56,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
 
       - name: Set new version
-        run: pnpm --filter ${{ matrix.package }} version --new-version ${{ needs.pre-release.outputs.VERSION }} 
+        run: pnpm --filter ${{ matrix.package }} version --new-version ${{ needs.pre-release.outputs.VERSION }}
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
