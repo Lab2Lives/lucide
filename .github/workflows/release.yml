@@ -43,7 +43,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        package: ['lucide-react']
+        package: ['lucide-react', 'lucide-react-native']
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
